@@ -51,6 +51,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\bg_gradient.png" />
+    <Content Include="Content\images\fubumvc.png" />
+    <Content Include="Content\scripts\lib\jquery-1.6.2.min.js" />
+    <Content Include="Content\scripts\lib\jquery-ui-1.8.15.custom.min.js" />
+    <Content Include="Content\scripts\lib\modernizr-2.0.6.min.js" />
+    <Content Include="Content\styles\images\bg_fallback.png" />
+    <Content Include="Content\styles\images\icon_sprite.png" />
+    <Content Include="Content\styles\images\progress_bar.gif" />
+    <Content Include="Content\styles\images\slider_handles.png" />
+    <Content Include="Content\styles\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\styles\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\styles\jquery-ui-1.8.7.custom.css" />
+    <Content Include="Content\styles\master.css" />
+    <Content Include="Content\styles\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
