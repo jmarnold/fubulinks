@@ -1,7 +1,7 @@
 What is FubuLinks?
 --
 
-FubuLinks is a litle sample application used in blog posts, webinars, and screencasts to get you started with FubuMVC. It's simple, concise, and gets the point across (we hope).
+FubuLinks is a little sample application used in blog posts, webinars, and screencasts to get you started with FubuMVC. It's simple, concise, and gets the point across (we hope).
 
 Where is CommonAssemblyInfo.cs?
 --
@@ -14,4 +14,4 @@ If you do not have ruby:
 
   * type: `echo // > src/CommonAssemblyInfo.cs`
   
-1. open src/FubLinks.sln with Visual Studio and Build the solution
+1. open src/FubuLinks.sln with Visual Studio and Build the solution
