@@ -1,4 +1,8 @@
-﻿using FubuMVC.Core;
+﻿using FubuLinks.Handlers;
+using FubuMVC.Conventions;
+using FubuMVC.Core;
+using FubuMVC.Spark;
+using FubuMVC.Validation;
 
 namespace FubuLinks.Configuration
 {
@@ -10,6 +14,19 @@ namespace FubuLinks.Configuration
 
             Applies
                 .ToThisAssembly();
+
+            this.UseSpark();
+
+            this.ApplyHandlerConventions(typeof (HandlersMarker));
+
+            this.Validation(x =>
+                                {
+                                    x.Actions.Include(call => call.HasInput && call.InputType().Name.Contains("Input"));
+                                });
+
+            Output
+                .ToJson
+                .WhenCallMatches(call => call.OutputType().Name.StartsWith("Json"));
 
             Views
                 .TryToAttachWithDefaultConventions();

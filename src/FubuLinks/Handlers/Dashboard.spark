@@ -1,0 +1,39 @@
+﻿<use namespace="System.Linq"/>
+<viewdata model="FubuLinks.Handlers.DashboardViewModel" />
+<content:main>
+  <fieldset>
+    <div class="row">
+      <input type="text" class="url" />
+      <button>
+        <span>Shorten</span>
+      </button>
+    </div>
+  </fieldset>
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Link</th>
+        <th>Original</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <if condition="Model.Links.Any()">
+        <tr each="var link in Model.Links">
+          <td>${link.ShortenedUrl}</td>
+          <td>${link.OriginalUrl}</td>
+          <td>
+            <a href="#">Remove</a> | <a href="#">Stats</a>
+          </td>
+        </tr>
+      </if>
+      <else>
+        <tr>
+          <td colspan="3">
+            <p>Nothing found.</p>
+          </td>
+        </tr>
+      </else>
+    </tbody>
+  </table>
+</content:main>

@@ -22,3 +22,7 @@ _ReSharper.*
 *.DS_Store
 test-results
 fubu-content
+
+tools/raven/Data
+tools/raven/Data/*
+tools/raven/Raven.Server.log*

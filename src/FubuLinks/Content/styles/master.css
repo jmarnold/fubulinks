@@ -1,5 +1,5 @@
 body { background-color: #999; }
-.container { background: url('../img/bg_gradient.png') repeat-x; margin:0; }
+.container { background: url('../images/bg_gradient.png') repeat-x; margin:0; }
 .wrapper { margin: 0 auto; width: 950px; }
 .main { background: #fff; min-height:300px; }
 header { text-align: center; margin-top:-20px; padding:20px; }

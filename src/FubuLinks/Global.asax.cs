@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Web.Routing;
+using Bottles;
 using FubuLinks.Configuration;
+using FubuLinks.Configuration.Bootstrapping;
 using FubuMVC.Core;
 using FubuMVC.StructureMap;
 
@@ -12,8 +14,10 @@ namespace FubuLinks
         {
             FubuApplication
                 .For<FubuLinksRegistry>()
-                .StructureMapObjectFactory(x => { })
+                .StructureMapObjectFactory(x => x.AddRegistry<CoreRegistry>())
                 .Bootstrap(RouteTable.Routes);
+
+            PackageRegistry.AssertNoFailures();
         }
     }
 }
