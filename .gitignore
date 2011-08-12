@@ -6,6 +6,7 @@ deploy
 deploy/*
 src/CommonAssemblyInfo.cs
 _ReSharper.*
+*.user
 *.csproj.user
 *.resharper.user
 *.ReSharper.user
@@ -13,6 +14,7 @@ _ReSharper.*
 *.cache
 ~$*
 *.stresult
+*.vs10x
 .fubu-alias
 .fubu-includes
 .fubu-manifest
