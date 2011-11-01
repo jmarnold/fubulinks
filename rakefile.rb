@@ -82,7 +82,7 @@ task :virtual_dir => [:compile] do
 end
 
 def self.fubu(args)
-  fubu = NuGet.tool("FubuMVC.References", "fubu.exe")
+  fubu = Nuget.tool("FubuMVC.References", "fubu.exe")
   fubu = Platform.runtime(fubu)
   sh "#{fubu} #{args}" 
 end
