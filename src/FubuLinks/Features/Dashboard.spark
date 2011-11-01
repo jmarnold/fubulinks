@@ -1,13 +1,18 @@
 ﻿<viewdata model="FubuLinks.Features.DashboardViewModel" />
+<content:title>Dashboard</content:title>
 <content:main>
-  <fieldset>
-    <div class="row">
-      <input type="text" class="url" />
-      <button>
-        <span>Shorten</span>
-      </button>
-    </div>
-  </fieldset>
+  <form class="form-stacked">
+    <fieldset>
+      <legend>FubuLinks</legend>
+      <div class="clearfix">
+        <label for="Url">Your url</label>
+        <div class="input">
+          <input type="text" class="url" />
+          <button class="btn">Shorten</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
   <table class="grid">
     <thead>
       <tr>
@@ -16,23 +21,5 @@
         <th>&nbsp;</th>
       </tr>
     </thead>
-    <tbody>
-      <if condition="Model.Links.Any()">
-        <tr each="var link in Model.Links">
-          <td>${link.ShortenedUrl}</td>
-          <td>${link.OriginalUrl}</td>
-          <td>
-            <a href="#">Remove</a> | <a href="#">Stats</a>
-          </td>
-        </tr>
-      </if>
-      <else>
-        <tr>
-          <td colspan="3">
-            <p>Nothing found.</p>
-          </td>
-        </tr>
-      </else>
-    </tbody>
   </table>
 </content:main>

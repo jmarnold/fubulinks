@@ -1,43 +1,61 @@
-﻿<!doctype html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="Content/styles/style.css">
-  <link rel="stylesheet" href="Content/styles/master.css">
-  <link rel="stylesheet" href="Content/styles/jquery-ui-1.8.7.custom.css">
-  <script src="Content/scripts/lib/modernizr-2.0.6.min.js"></script>
-  <script src="Content/scripts/lib/jquery-1.6.2.min.js"></script>
-  <script src="Content/scripts/lib/jquery-ui-1.8.15.custom.min.js"></script>
-    <script src="Content/scripts/core.js"></script>
-</head>
-<body>
-	<div class="container">
-		<header>
-			<div class="wrapper">
-				<h1>FubuLinks</h1>
-				<h3>just another way to learn FubuMVC</h3>
-			</div>
-		</header>
-		<div class="main" role="main">
-			<div class="wrapper">
-        <use content="main" />
-			</div>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="FubuLinks" />
+    <meta name="author" content="FubuMVC" />
+    <title>
+      <use content="title"/> | FubuLinks
+    </title>
+    <Stylesheet href="fubulinks-default.css" />
+    <Script src="fubulinks-core" />
+    <use content="head"/>
+    <Styles />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="${this.Urls.UrlFor(new FubuLinks.Features.DashboardLinksRequestModel())}">
+            <Image src="fubumvc.png" />
+          </a>
+		  <h3>FubuLinks</h3>
 		</div>
-	</div> <!--! end of #container -->
-	<footer>
-		<div class="wrapper">
-			<div class="logo">
-				<img src="Content/images/fubumvc.png" alt="FubuMVC" title="FubuMVC" />
-			</div>
-			<div class="powered-by">
-				<span>Powered by FubuMVC | <a href="#">0.9.2</a></span>
-			</div>
+      </div>
+    </div>
+    <div id="Content">
+		<div class="container-fluid">
+			<use content="main" />
 		</div>
+    </div>
+    <footer>
+      <div class="container">
+        <p style="margin-bottom:20px">
+          <span>Powered by:</span>
+          <Image src="fubumvc.png" />
+        </p>
+        <dl>
+          <dt>Site:</dt>
+          <dd>
+            <a href="http://mvc.fubu-project.org" target="_blank">http://mvc.fubu-project.org</a>
+          </dd>
+          <dt>Source:</dt>
+          <dd>
+            <a href="http://github.com/jmarnold/fubulinks" target="_blank">http://github.com/jmarnold/fubulinks</a>
+          </dd>
+          <dt>Docs:</dt>
+          <dd>
+            <a href="http://readthedocs.org/docs/fubumvc/en/latest/" target="_blank">Read The Docs</a>
+          </dd>
+          <dt>IRC:</dt>
+          <dd>#fubumvc</dd>
+          <dt>Mailing List</dt>
+          <dd>
+            <a href="https://groups.google.com/forum/#!forum/fubumvc-devel" target="_blank">Google Groups: fubumvc-devel</a>
+          </dd>
+        </dl>
+      </div>
     </footer>
-</body>
+    <Scripts />
+  </body>
 </html>

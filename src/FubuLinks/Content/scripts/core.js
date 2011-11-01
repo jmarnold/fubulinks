@@ -1,9 +1,4 @@
 ﻿$(document).ready(function () {
-    $('button').button();
-    var toggleHover = function () {
-        $(this).toggleClass('ui-state-hover');
-    };
-
     $('.grid > thead > tr > th').each(function () {
         $(this)
 				.addClass('ui-state-default')

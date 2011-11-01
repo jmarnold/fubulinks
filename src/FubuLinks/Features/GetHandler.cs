@@ -12,7 +12,7 @@ namespace FubuLinks.Features
             _linkRepository = linkRepository;
         }
 
-        public DashboardViewModel Execute(DashboardRequestModel requestModel)
+        public DashboardViewModel Execute(DashboardLinksRequestModel linksRequestModel)
         {
             return new DashboardViewModel
                        {
@@ -31,5 +31,5 @@ namespace FubuLinks.Features
         public IEnumerable<Link> Links { get; set; }
     }
 
-    public class DashboardRequestModel { }
+    public class DashboardLinksRequestModel { }
 }

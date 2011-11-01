@@ -23,7 +23,7 @@ namespace FubuLinks.Tests.Features
                 .Return(new List<Link> {link});
 
             ClassUnderTest
-                .Execute(new DashboardRequestModel())
+                .Execute(new DashboardLinksRequestModel())
                 .Links
                 .ShouldContain(l => l.Id.Equals(link.Id));
         }
