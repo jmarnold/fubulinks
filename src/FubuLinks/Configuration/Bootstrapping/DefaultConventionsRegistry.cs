@@ -1,4 +1,5 @@
-﻿using StructureMap.Configuration.DSL;
+﻿using FubuLinks.Repositories;
+using StructureMap.Configuration.DSL;
 
 namespace FubuLinks.Configuration.Bootstrapping
 {
@@ -11,6 +12,8 @@ namespace FubuLinks.Configuration.Bootstrapping
                          x.TheCallingAssembly();
                          x.WithDefaultConventions();
                      });
+
+            For<ILinkRepository>().Singleton().Use<LinkRepository>();
         }
     }
 }

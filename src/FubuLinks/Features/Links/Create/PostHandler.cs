@@ -1,5 +1,7 @@
 ﻿using System;
+using FubuCore;
 using FubuLinks.Repositories;
+using FubuMVC.Core.Ajax;
 using FubuValidation;
 
 namespace FubuLinks.Features.Links.Create // links/create (POST)
@@ -15,9 +17,9 @@ namespace FubuLinks.Features.Links.Create // links/create (POST)
             _urlShortener = urlShortener;
         }
 
-        public JsonResponse Execute(CreateLinkInputModel inputModel)
+        public AjaxContinuation Execute(CreateLinkInputModel inputModel)
         {
-            var response = new JsonResponse { Success = true };
+            var response = new AjaxContinuation { Success = true };
             var link = new Link
                            {
                                DateAdded = DateTime.Now,
@@ -27,6 +29,7 @@ namespace FubuLinks.Features.Links.Create // links/create (POST)
             _repository.Insert(link);
             _repository.Save();
 
+            response["link"] = link;
             return response;
         }
     }
@@ -46,7 +49,8 @@ namespace FubuLinks.Features.Links.Create // links/create (POST)
     {
         public string Shorten(string input)
         {
-            return Guid.NewGuid().ToString("N");
+            // TODO -- wire up the actual route to take this in
+            return "{0}".ToFormat(Guid.NewGuid().ToString("N"));
         }
     }
 }

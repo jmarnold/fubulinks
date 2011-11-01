@@ -20,10 +20,6 @@ namespace FubuLinks.Configuration
 
             this.Validation(x => x.Actions.Include(call => call.HasInput && call.InputType().Name.Contains("Input")));
 
-            Output
-                .ToJson
-                .WhenCallMatches(call => call.OutputType().Name.StartsWith("Json"));
-
             Views
                 .TryToAttachWithDefaultConventions();
         }

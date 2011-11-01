@@ -4,5 +4,5 @@
   <element name="Script">#this.Asset('@src');</element>
   <element name="Scripts">this.WriteScriptTags()</element>
   <element name="Styles">this.WriteCssTags()</element>
-  <element name="Image">this.ImageFor('@src')</element>
+  <element name="Image">this.AssetImageFor('@src')</element>
 </bindings>

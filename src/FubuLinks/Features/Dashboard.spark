@@ -1,19 +1,30 @@
 ﻿<viewdata model="FubuLinks.Features.DashboardViewModel" />
 <content:title>Dashboard</content:title>
+<content:head>
+  <Script src="fubulinks.js" />
+</content:head>
 <content:main>
-  <form class="form-stacked">
+  <!-- TODO: Come back and wire this up with HTML conventions -->
+  <form id="ShortenUrlForm" action="${this.Urls.UrlFor(new FubuLinks.Features.Links.Create.CreateLinkInputModel())}" class="form-stacked" method="post">
     <fieldset>
       <legend>FubuLinks</legend>
       <div class="clearfix">
         <label for="Url">Your url</label>
         <div class="input">
-          <input type="text" class="url" />
+          <!-- TODO: Come back and wire this up with HTML conventions -->
+          <input type="text" class="url required" id="OriginalUrl" name="OriginalUrl" />
           <button class="btn">Shorten</button>
         </div>
       </div>
     </fieldset>
   </form>
-  <table class="grid">
+  <script type="text/html" id="link-template">
+    <tr>
+      <td>{{model.ShortenedUrl}}</td>
+      <td>{{model.OriginalUrl}}</td>
+    </tr>
+  </script>
+  <table class="grid" id="links">
     <thead>
       <tr>
         <th>Link</th>
@@ -21,5 +32,13 @@
         <th>&nbsp;</th>
       </tr>
     </thead>
+    <tbody></tbody>
   </table>
 </content:main>
+<content:footer>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      FubuLinks.start(!{this.SerializeToJson(Model.Links)});
+    });
+  </script>
+</content:footer>
