@@ -1,5 +1,4 @@
 ﻿using FubuLinks.Handlers;
-using FubuMVC.Conventions;
 using FubuMVC.Core;
 using FubuMVC.Spark;
 using FubuMVC.Validation;
@@ -17,12 +16,9 @@ namespace FubuLinks.Configuration
 
             this.UseSpark();
 
-            this.ApplyHandlerConventions(typeof (HandlersMarker));
+            ApplyHandlerConventions(typeof (HandlersMarker));
 
-            this.Validation(x =>
-                                {
-                                    x.Actions.Include(call => call.HasInput && call.InputType().Name.Contains("Input"));
-                                });
+            this.Validation(x => x.Actions.Include(call => call.HasInput && call.InputType().Name.Contains("Input")));
 
             Output
                 .ToJson
