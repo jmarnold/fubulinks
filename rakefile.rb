@@ -24,7 +24,7 @@ BUILD_NUMBER = build_number
 props = { :stage => File.expand_path("build"), :artifacts => File.expand_path("artifacts") }
 
 desc "**Default**, compiles and runs tests"
-task :default => [:compile, :virtual_dir, :unit_test]
+task :default => [:compile, :unit_test]
 task :ci => [:compile, :unit_test]
 
 desc "Update the version information for the build"
