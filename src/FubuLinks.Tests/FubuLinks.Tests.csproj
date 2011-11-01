@@ -67,9 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Handlers\when_creating_a_link.cs" />
-    <Compile Include="Handlers\when_displaying_the_dashboard.cs" />
+    <Compile Include="Features\when_creating_a_link.cs" />
+    <Compile Include="Features\when_displaying_the_dashboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\LinkRepositoryTester.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubuLinks\FubuLinks.csproj">

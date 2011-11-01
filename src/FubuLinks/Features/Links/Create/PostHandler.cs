@@ -2,7 +2,7 @@
 using FubuLinks.Repositories;
 using FubuValidation;
 
-namespace FubuLinks.Handlers.Links.Create // links/create (POST)
+namespace FubuLinks.Features.Links.Create // links/create (POST)
 {
     public class PostHandler
     {

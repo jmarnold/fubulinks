@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FubuLinks.Handlers
+namespace FubuLinks.Features
 {
     public class JsonResponse
     {

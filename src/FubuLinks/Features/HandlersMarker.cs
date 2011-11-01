@@ -1,4 +1,4 @@
-﻿namespace FubuLinks.Handlers
+﻿namespace FubuLinks.Features
 {
     public class HandlersMarker
     { 

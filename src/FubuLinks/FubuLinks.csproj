@@ -118,20 +118,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Handlers\GetHandler.cs" />
-    <Compile Include="Handlers\HandlersMarker.cs" />
-    <Compile Include="Handlers\JsonResponse.cs" />
-    <Compile Include="Handlers\Links\Create\PostHandler.cs" />
+    <Compile Include="Features\GetHandler.cs" />
+    <Compile Include="Features\HandlersMarker.cs" />
+    <Compile Include="Features\JsonResponse.cs" />
+    <Compile Include="Features\Links\Create\PostHandler.cs" />
     <Compile Include="Link.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ILinkRepository.cs" />
+    <Compile Include="Repositories\LinkRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Handlers\Dashboard.spark" />
+    <Content Include="fubu-content\fubumvc-diagnostics.zip" />
+    <None Include="Features\Dashboard.spark" />
     <None Include="Shared\Application.spark" />
+    <None Include="Shared\_global.spark" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

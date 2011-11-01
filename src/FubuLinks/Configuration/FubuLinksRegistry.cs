@@ -1,4 +1,4 @@
-﻿using FubuLinks.Handlers;
+﻿using FubuLinks.Features;
 using FubuMVC.Core;
 using FubuMVC.Spark;
 using FubuMVC.Validation;

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using FubuLinks.Handlers;
+using FubuLinks.Features;
 using FubuLinks.Repositories;
 using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FubuLinks.Tests.Handlers
+namespace FubuLinks.Tests.Features
 {
     [TestFixture]
     public class when_displaying_the_dashboard : InteractionContext<GetHandler>

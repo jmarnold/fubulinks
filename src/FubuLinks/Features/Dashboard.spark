@@ -1,5 +1,4 @@
-﻿<use namespace="System.Linq"/>
-<viewdata model="FubuLinks.Handlers.DashboardViewModel" />
+﻿<viewdata model="FubuLinks.Features.DashboardViewModel" />
 <content:main>
   <fieldset>
     <div class="row">

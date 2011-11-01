@@ -1,10 +1,10 @@
-﻿using FubuLinks.Handlers.Links.Create;
+﻿using FubuLinks.Features.Links.Create;
 using FubuLinks.Repositories;
 using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace FubuLinks.Tests.Handlers
+namespace FubuLinks.Tests.Features
 {
     [TestFixture]
     public class when_creating_a_link : InteractionContext<PostHandler>

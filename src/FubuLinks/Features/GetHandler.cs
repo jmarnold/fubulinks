@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using FubuLinks.Repositories;
 
-namespace FubuLinks.Handlers
+namespace FubuLinks.Features
 {
     public class GetHandler
     {
